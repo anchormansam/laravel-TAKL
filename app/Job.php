@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Job extends Model
 {
-    //
+    public function Status()
+    {
+        return $this->hasOne('App\JobStatus');
+    }
 }

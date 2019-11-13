@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class JobStatus extends Model
 {
-    //
+    public function currentStatus()
+    {
+        return $this->belongsTo('App\Job');
+    }
 }

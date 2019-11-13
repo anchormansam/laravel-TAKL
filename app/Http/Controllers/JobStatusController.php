@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\transaction_type;
+use App\JobStatus;
 use Illuminate\Http\Request;
 
-class transaction_type extends Controller
+class JobStatusController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class transaction_type extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\transaction_type  $transaction_type
+     * @param  \App\JobStatus  $jobStatus
      * @return \Illuminate\Http\Response
      */
-    public function show(transaction_type $transaction_type)
+    public function show(JobStatus $jobStatus)
     {
         //
     }
@@ -52,10 +52,10 @@ class transaction_type extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\transaction_type  $transaction_type
+     * @param  \App\JobStatus  $jobStatus
      * @return \Illuminate\Http\Response
      */
-    public function edit(transaction_type $transaction_type)
+    public function edit(JobStatus $jobStatus)
     {
         //
     }
@@ -64,10 +64,10 @@ class transaction_type extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\transaction_type  $transaction_type
+     * @param  \App\JobStatus  $jobStatus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, transaction_type $transaction_type)
+    public function update(Request $request, JobStatus $jobStatus)
     {
         //
     }
@@ -75,10 +75,10 @@ class transaction_type extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\transaction_type  $transaction_type
+     * @param  \App\JobStatus  $jobStatus
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transaction_type $transaction_type)
+    public function destroy(JobStatus $jobStatus)
     {
         //
     }

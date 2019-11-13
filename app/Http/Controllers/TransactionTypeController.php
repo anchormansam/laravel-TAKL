@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\job_status;
+use App\TransactionType;
 use Illuminate\Http\Request;
 
-class job_statuscontroller extends Controller
+class TransactionTypeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class job_statuscontroller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\job_status  $job_status
+     * @param  \App\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function show(job_status $job_status)
+    public function show(TransactionType $transactionType)
     {
         //
     }
@@ -52,10 +52,10 @@ class job_statuscontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\job_status  $job_status
+     * @param  \App\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function edit(job_status $job_status)
+    public function edit(TransactionType $transactionType)
     {
         //
     }
@@ -64,10 +64,10 @@ class job_statuscontroller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\job_status  $job_status
+     * @param  \App\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, job_status $job_status)
+    public function update(Request $request, TransactionType $transactionType)
     {
         //
     }
@@ -75,10 +75,10 @@ class job_statuscontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\job_status  $job_status
+     * @param  \App\TransactionType  $transactionType
      * @return \Illuminate\Http\Response
      */
-    public function destroy(job_status $job_status)
+    public function destroy(TransactionType $transactionType)
     {
         //
     }

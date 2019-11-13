@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class JobStatus extends Migration
+class CreateTransactionTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class JobStatus extends Migration
      */
     public function up()
     {
-        Schema::create('job_status', function (Blueprint $table) {
-        
+        Schema::create('transaction_types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-        
+            $table->timestamps();
         });
     }
 
@@ -28,6 +26,6 @@ class JobStatus extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transaction_types');
     }
 }

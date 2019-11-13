@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\transactions;
+use App\Transactions;
 use Illuminate\Http\Request;
 
-class transactionscontroller extends Controller
+class TransactionsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class transactionscontroller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\transactions  $transactions
+     * @param  \App\Transactions  $transactions
      * @return \Illuminate\Http\Response
      */
-    public function show(transactions $transactions)
+    public function show(Transactions $transactions)
     {
         //
     }
@@ -52,10 +52,10 @@ class transactionscontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\transactions  $transactions
+     * @param  \App\Transactions  $transactions
      * @return \Illuminate\Http\Response
      */
-    public function edit(transactions $transactions)
+    public function edit(Transactions $transactions)
     {
         //
     }
@@ -64,10 +64,10 @@ class transactionscontroller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\transactions  $transactions
+     * @param  \App\Transactions  $transactions
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, transactions $transactions)
+    public function update(Request $request, Transactions $transactions)
     {
         //
     }
@@ -75,10 +75,10 @@ class transactionscontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\transactions  $transactions
+     * @param  \App\Transactions  $transactions
      * @return \Illuminate\Http\Response
      */
-    public function destroy(transactions $transactions)
+    public function destroy(Transactions $transactions)
     {
         //
     }

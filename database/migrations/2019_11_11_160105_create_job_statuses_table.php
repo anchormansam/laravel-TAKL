@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Profile extends Migration
+class CreateJobStatusesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class Profile extends Migration
      */
     public function up()
     {
-        Schema::create('profiles', function (Blueprint $table) {
-            
+        Schema::create('job_statuses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
-            $table->binary('photo');
-            $table->boolean('provider');
-
-            $table->foreign('user_id')->references('id')->on('users');
-
+            $table->timestamps();
         });
     }
 
@@ -32,6 +26,6 @@ class Profile extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('job_statuses');
     }
 }

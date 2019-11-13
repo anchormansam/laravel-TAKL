@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Job extends Migration
+class CreateTransactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,15 @@ class Job extends Migration
      */
     public function up()
     {
-        Schema::create('jobs', function (Blueprint $table) {
-            
+        Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('job_id');
+            $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('title');
-            $table->string('price');
-            $table->string('description');
-            $table->unsignedBigInteger('status_id');
 
+            $table->foreign('job_id')->references('id')->on('jobs');
+            $table->foreign('type_id')->references('id')->on('transaction_types');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('status_id')->references('id')->on('job_status');
         });
     }
 
@@ -34,6 +32,6 @@ class Job extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('transactions');
     }
 }

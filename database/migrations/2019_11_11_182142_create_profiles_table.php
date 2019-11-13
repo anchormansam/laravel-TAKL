@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Transaction extends Migration
+class CreateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,15 @@ class Transaction extends Migration
      */
     public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
-        
+        Schema::create('profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('job_id');
-            $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('user_id');
-
-            $table->foreign('job_id')->references('id')->on('jobs');
-            $table->foreign('type_id')->references('id')->on('transaction_types');
+            $table->binary('photo');
+            $table->boolean('provider');
+            $table->timestamps();
+            
             $table->foreign('user_id')->references('id')->on('users');
-        
         });
-
-
     }
 
     /**
@@ -36,6 +31,6 @@ class Transaction extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('profiles');
     }
 }
