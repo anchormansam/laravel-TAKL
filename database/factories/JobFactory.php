@@ -16,10 +16,10 @@ $factory->define(Job::class, function (Faker $faker) {
     return [
 
         'user_id' => $faker->randomElement($users),
+        'status_id' => $faker->randomElement($status),
         'title' => $faker->jobTitle,
         'price' => $faker->randomNumber(2),
         'description' => $faker->sentence,
-        'status_id' => $faker->randomElement($status),
         
         
     ];

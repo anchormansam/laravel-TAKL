@@ -18,6 +18,8 @@ class CreateTransactionsTable extends Migration
             $table->unsignedBigInteger('job_id');
             $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('user_id');
+            $table->timestamps();
+
 
             $table->foreign('job_id')->references('id')->on('jobs');
             $table->foreign('type_id')->references('id')->on('transaction_types');

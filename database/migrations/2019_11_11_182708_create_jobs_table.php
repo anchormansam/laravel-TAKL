@@ -16,10 +16,10 @@ class CreateJobsTable extends Migration
         Schema::create('jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('status_id');
             $table->string('title');
             $table->string('price');
             $table->string('description');
-            $table->unsignedBigInteger('status_id');
             $table->timestamps();
            
             $table->foreign('user_id')->references('id')->on('users');

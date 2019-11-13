@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class JobSeeder extends Seeder
+class JobStatusSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class JobSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Job::class, 6)->create();
+        factory(App\JobStatus::class, 6)->create();
     }
 }
