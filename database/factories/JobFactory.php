@@ -3,12 +3,24 @@
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
 use App\Job;
+use App\User;
+use App\JobStatus;
+
 use Faker\Generator as Faker;
 
 $factory->define(Job::class, function (Faker $faker) {
+   
+    $users = User::all()->pluck('id')->toArray();
+    $status = JobStatus::all()->pluck('id')->toArray();
+
     return [
-        'Title' => $faker->jobTitle,
-        'Price' => setPrice($faker->randomNumber(2)),
-        'Description' => $faker->sentence,
+
+        'user_id' => $faker->randomElement($users),
+        'title' => $faker->jobTitle,
+        'price' => $faker->randomNumber(2),
+        'description' => $faker->sentence,
+        'status_id' => $faker->randomElement($status),
+        
+        
     ];
 });

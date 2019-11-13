@@ -20,6 +20,7 @@ class CreateJobsTable extends Migration
             $table->string('price');
             $table->string('description');
             $table->unsignedBigInteger('status_id');
+            $table->timestamps();
            
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('status_id')->references('id')->on('job_statuses');

@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(TransactionType::class, function (Faker $faker) {
     return [
-        'type' => $faker->text,
+        
+        'title' => $faker->text,
     ];
 });
