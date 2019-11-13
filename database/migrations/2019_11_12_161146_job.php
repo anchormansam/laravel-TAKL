@@ -22,7 +22,7 @@ class Job extends Migration
             $table->string('description');
             $table->unsignedBigInteger('status_id');
 
-            $table->foreign('user_id')->references('id')->on('user');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('status_id')->references('id')->on('job_status');
         });
     }
