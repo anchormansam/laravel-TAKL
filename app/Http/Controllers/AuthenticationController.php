@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Lcobucci\JWT\Parser;
 
 use App\User;
+use App\Profile;
 
 class AuthenticationController extends Controller
 {
@@ -20,7 +21,8 @@ class AuthenticationController extends Controller
                     'data' => [
                         'token' => $token, 
                         'user' => $user->id,
-                    ],
+                        'user_profile' => Profile::where("user_id", $user->id)->get(),
+                        ],
                     ];
                 return response($response, 200);
             } else {
