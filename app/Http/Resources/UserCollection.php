@@ -16,15 +16,10 @@ class UserCollection extends ResourceCollection
     {
         return[
 
-            // 'id' => $this->id,
-            // 'name' => $this->name,
-            // 'email' => $this->email,
-            'data' => $this->collection,
-            'links' => [
-                'self' => 'link-value',
-            ],
-            ];
-
+            'id' => $this->id,
+            'name' => $this->name,
+            'email' => $this->email,
+        ];
     }
     
 }

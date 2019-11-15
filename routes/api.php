@@ -21,8 +21,13 @@ Route::post('login','AuthenticationController@login')->name('login');
 
 Route::middleware('auth:api')->group(function () {
         
-        Route::get('/logout', 'AuthenticationController@logout')->name('logout');
+    // Route::get('/users', function () {
+    //     return new UserCollection(User::all());
+    // });
+    
+    Route::get('/logout', 'AuthenticationController@logout')->name('logout');
 });
+
 
 
 
